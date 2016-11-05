@@ -3,9 +3,13 @@ export default () => (
         entry: './index.js',
         output: {
             path: './dist',
-            filename: 'nmTransalate.js'
+            filename: 'nmTransalate.js',
+            libraryTarget: 'var',
+            library: 'nmTransalate'
         },
-        externals: ['lodash'],
+        externals:{
+            '_' : 'lodash'
+        },
         module: {
             rules: [{
                 test: /.js$/,
