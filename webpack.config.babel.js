@@ -5,6 +5,7 @@ export default () => (
             path: './dist',
             filename: 'nmTransalate.js'
         },
+        externals: ['lodash'],
         module: {
             rules: [{
                 test: /.js$/,
