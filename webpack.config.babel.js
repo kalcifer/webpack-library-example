@@ -4,7 +4,7 @@ export default () => (
         output: {
             path: './dist',
             filename: 'nmTransalate.js',
-            libraryTarget: 'var',
+            libraryTarget: 'umd',
             library: 'nmTransalate'
         },
         externals:{
