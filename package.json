@@ -4,6 +4,8 @@
   "description": "An example of how to author libraries using webpack",
   "main": "index.js",
   "scripts": {
+    "build:browser": "webpack && cp dist/nmTransalate.js examples/browser",
+    "build:node": "webpack && cp dist/nmTransalate.js examples/node/ && node examples/node/example.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
