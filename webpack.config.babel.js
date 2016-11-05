@@ -3,9 +3,9 @@ export default () => (
         entry: './index.js',
         output: {
             path: './dist',
-            filename: 'nmTransalate.js',
+            filename: 'webpack-numbers.js',
             libraryTarget: 'umd',
-            library: 'nmTransalate'
+            library: 'webpackNumbers'
         },
         externals:{
             '_' : 'lodash'
