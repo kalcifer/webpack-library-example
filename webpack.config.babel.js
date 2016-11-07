@@ -7,8 +7,13 @@ export default () => (
             libraryTarget: 'umd',
             library: 'webpackNumbers'
         },
-        externals:{
-            '_' : 'lodash'
+        externals: {
+            'lodash': {
+                commonjs: 'lodash',
+                commonjs2: 'lodash',
+                amd: 'lodash',
+                root: '_'
+            }
         },
         module: {
             rules: [{

@@ -2,7 +2,7 @@
   "name": "y",
   "version": "1.0.0",
   "description": "An example of how to author libraries using webpack",
-  "main": "index.js",
+  "main": "dist/webpack-numbers.js",
   "scripts": {
     "build:browser": "webpack && cp dist/webpack-numbers.js examples/browser",
     "build:node": "webpack && cp dist/webpack-numbers.js examples/node/ && node examples/node/example.js",
