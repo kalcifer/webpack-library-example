@@ -16,18 +16,9 @@ export default () => (
             }
         },
         module: {
-            rules: [{
-                test: /.js$/,
-                exclude: /node_modules/,
-                use: 'babel-loader',
-                options: {
-                    presets: ['es2015-webpack']
-                }
-            }, {
-                test: /.json$/,
-                exclude: /node_modules/,
-                use: 'json-loader'
-            }]
-        }
+            rules: [
+                {test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"}
+            ]
+        },
     }
 );
