@@ -1,8 +1,10 @@
+const path = require('path');
+
 export default () => (
     {
         entry: './index.js',
         output: {
-            path: './dist',
+            path: path.resolve(__dirname, './dist'),
             filename: 'webpack-numbers.js',
             libraryTarget: 'umd',
             library: 'webpackNumbers'
