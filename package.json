@@ -24,6 +24,6 @@
     "eslint": "^3.9.1",
     "eslint-loader": "^1.6.1",
     "lodash": "^4.16.6",
-    "webpack": "^2.2.1"
+    "webpack": "^3.5.5"
   }
 }

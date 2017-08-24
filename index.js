@@ -25,4 +25,4 @@ const converttonum = (word) => {
     }, -1);
 };
 
-module.exports = createTransalator();
+export default createTransalator();
