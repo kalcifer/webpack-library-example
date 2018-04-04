@@ -8,6 +8,7 @@ export default () => (
             path: path.resolve(__dirname, './dist'),
             filename: 'webpack-numbers.js',
             libraryTarget: 'umd',
+            globalObject: 'typeof self !== \'undefined\' ? self : this',
             // libraryExport: 'default',
             library: 'webpackNumbers'
         },
