@@ -4,8 +4,9 @@
   "description": "An example of how to author libraries using webpack",
   "main": "dist/webpack-numbers.js",
   "scripts": {
-    "build:browser": "webpack && cp dist/webpack-numbers.js examples/browser",
-    "build:node": "webpack && cp dist/webpack-numbers.js examples/node/ && node examples/node/example.js",
+    "build-all": "npm run build-browser && npm run build-node",
+    "build-browser": "webpack && cp dist/webpack-numbers.js examples/browser",
+    "build-node": "webpack && cp dist/webpack-numbers.js examples/node/ && node examples/node/example.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
