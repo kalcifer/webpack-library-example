@@ -24,7 +24,7 @@
     "eslint": "^3.9.1",
     "eslint-loader": "^1.6.1",
     "lodash": "^4.16.6",
-    "webpack": "^4.4.1",
-    "webpack-cli": "^2.0.12"
+    "webpack": "^4.29.1",
+    "webpack-cli": "^3.2.3"
   }
 }
