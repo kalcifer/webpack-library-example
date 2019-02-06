@@ -1,13 +1,11 @@
 {
-  "name": "y",
+  "name": "webpack-library-example",
   "version": "1.0.0",
   "description": "An example of how to author libraries using webpack",
   "main": "dist/webpack-numbers.js",
   "scripts": {
-    "build-all": "npm run build-browser && npm run build-node",
-    "build-browser": "webpack && cp dist/webpack-numbers.js examples/browser",
-    "build-node": "webpack && cp dist/webpack-numbers.js examples/node/ && node examples/node/example.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "test": "node examples/node/example.js && node --experimental-modules examples/node-es6/example.mjs && echo \"Open examples/browser/index.html in a browser to test invocation with html <SCRIPT> tags\""
   },
   "keywords": [
     "webpack",
