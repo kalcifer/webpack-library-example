@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import numRef from './ref.json';
 
-function createTransalator() {
+function createTranslator() {
     return {
         numtoword: (num) => {
             return num < 0 || num > 5 ? 'This is a failure' : converttoword(num);
@@ -25,4 +25,6 @@ const converttonum = (word) => {
     }, -1);
 };
 
-export default createTransalator();
+export {
+    createTranslator
+}

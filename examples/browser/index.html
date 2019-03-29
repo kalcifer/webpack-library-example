@@ -8,7 +8,7 @@
         </div>
         <script type='text/javascript' src='./webpack-numbers.js'></script>
         <script type='text/javascript'>
-            document.getElementById('root').innerHTML = " This is a browser example where and api is called to transalate 'One' to '1' \n Results: wordtonum('One') === " + webpackNumbers.wordtonum('One');
+            document.getElementById('root').innerHTML = " This is a browser example where and api is called to transalate 'One' to '1' \n Results: wordtonum('One') === " + webpackNumbers.createTranslator().wordtonum('One');
         </script>
     </body>
 </html>
