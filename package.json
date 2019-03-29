@@ -4,8 +4,7 @@
   "description": "An example of how to author libraries using webpack",
   "main": "dist/webpack-numbers.js",
   "scripts": {
-    "build:browser": "webpack && cp dist/webpack-numbers.js examples/browser",
-    "build:node": "webpack && cp dist/webpack-numbers.js examples/node/ && node examples/node/example.js",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -17,14 +16,15 @@
   "author": "pksjce",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-env": "^1.6.1",
-    "eslint": "^3.9.1",
-    "eslint-loader": "^1.6.1",
-    "lodash": "^4.16.6",
-    "webpack": "^4.4.1",
-    "webpack-cli": "^2.0.12"
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-transform-runtime": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "babel-loader": "^8.0.5",
+    "lodash": "^4.17.11",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.2"
   }
 }
