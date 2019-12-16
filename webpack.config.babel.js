@@ -3,6 +3,15 @@ module.exports = {
   optimization: {
     splitChunks: {
       cacheGroups: {
+        default: false
+      }
+    }
+  }
+};module.exports = {
+  //...
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
         commons: {
           test: /[\\/]node_modules[\\/]/,
           // cacheGroupKey here is `commons` as the key of the cacheGroup
