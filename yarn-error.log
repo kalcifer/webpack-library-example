@@ -1,3 +1,4 @@
+yarn-error.log
 Arguments: 
   /home/zhu/.nvm/versions/node/v8.9.1/bin/node /home/zhu/.nvm/versions/node/v8.9.1/bin/yarn build:node
 
