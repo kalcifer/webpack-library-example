@@ -1,3 +1,13 @@
+// webpack.config.js
+const MinifyPlugin = require("babel-minify-webpack-plugin");
+module.exports = {
+  entry: //...,
+  output: //...,
+  plugins: [
+    new MinifyPlugin(minifyOpts, pluginOpts)
+  ]
+}
+npm install babel-minify-webpack-plugin --save-dev
 package.json
 const path = require('path');
   const HtmlWebpackPlugin = require('html-webpack-plugin');
