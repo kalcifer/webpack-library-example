@@ -2,6 +2,16 @@ module.exports = {
   //...
   optimization: {
     splitChunks: {
+      chunks (chunk) {
+        // exclude `my-excluded-chunk`
+        return chunk.name !== 'my-excluded-chunk';
+      }
+    }
+  }
+};module.exports = {
+  //...
+  optimization: {
+    splitChunks: {
       // include all types of chunks
       chunks: 'all'
     }
