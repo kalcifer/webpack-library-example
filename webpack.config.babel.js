@@ -1,5 +1,62 @@
 const path = require('path');
   const HtmlWebpackPlugin = require('html-webpack-plugin');
+  const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
+  module.exports = {
++   mode: 'development',
+    entry: {
+      app: './src/index.js',
+      print: './src/print.js',
+    },
+    plugins: [
+      // new CleanWebpackPlugin(['dist/*']) for < v2 versions of CleanWebpackPlugin
+      new CleanWebpackPlugin(),
+      new HtmlWebpackPlugin({
+        title: 'Development',
+      }),
+    ],
+    output: {
+      filename: '[name].bundle.js',
+      path: path.resolve(__dirname, 'dist'),
+    },
+  };
+const path = require('path');
+  const HtmlWebpackPlugin = require('html-webpack-plugin');
+  const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
+  module.exports = {
+    mode: 'development',
+    entry: {
+      app: './src/index.js',
+      print: './src/print.js',
+    },
++   devtool: 'inline-source-map',
+    plugins: [
+      new CleanWebpackPlugin(),
+      new HtmlWebpackPlugin({
+        title: 'Development',
+      }),
+    ],
+    output: {
+      filename: '[name].bundle.js',
+      path: path.resolve(__dirname, 'dist'),
+    },
+  };
+export default function printMe() {
+-   console.log('I get called from print.js!');
++   cosnole.log('I get called from print.js!');
+  }
+...
+          Asset       Size  Chunks                    Chunk Names
+  app.bundle.js    1.44 MB    0, 1  [emitted]  [big]  app
+print.bundle.js    6.43 kB       1  [emitted]         print
+     index.html  248 bytes          [emitted]
+...
+Uncaught ReferenceError: cosnole is not defined
+   at HTMLButtonElement.printMe (print.js:2)
+
+const path = require('path');
+  const HtmlWebpackPlugin = require('html-webpack-plugin');
 + const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
   module.exports = {
