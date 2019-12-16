@@ -3,6 +3,110 @@ module.exports = {
   optimization: {
     splitChunks: {
       cacheGroups: {
+        vendors: {
+          idHint: 'vendors'
+        }
+      }
+    }
+  }
+};
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendors: {
+          idHint: 'vendors'
+        }
+      }
+    }
+  }
+};module.exports = {
+  //...
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendors: {
+          enforce: true
+        }
+      }
+    }
+  }
+};module.exports = {
+  //...
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendors: {
+          filename: 'js/[name]/bundle.js'
+        }
+      }
+    }
+  }
+};module.exports = {
+  //...
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendors: {
+          filename: (chunkData) => {
+            // Use chunkData object for generating filename string based on your requirements
+            return `${chunkData.chunk.name}-bundle.js`;
+          }
+        }
+      }
+    }
+  }
+};module.exports = {
+  //...
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendors: {
+          filename: '[name].bundle.js'
+        }
+      }
+    }
+  }
+};module.exports = {
+  //...
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendors: {
+          test(module, chunks) {
+            //...
+            return module.type === 'javascript/auto';
+          }
+        }
+      }
+    }
+  }
+};module.exports = {
+  //...
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        json: {
+          type: 'json'
+        }
+      }
+    }
+  }
+};module.exports = {
+  //...
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendors: {
+          reuseExistingChunk: true
+        }
+      }
+    }
+  }
+};module.exports = {
+  //...
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
         default: false
       }
     }
