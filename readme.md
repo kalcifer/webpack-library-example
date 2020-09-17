@@ -2,7 +2,7 @@ Tutorial of how to author a library using [webpack](https://github.com/webpack/w
 
 ### Outline
 
-This library exposes functionality to transalte numbers to words.
+This library exposes functionality to translate numbers to words.
 It is trivial code but the aim is to bundle it using webpack.
 
 ### Features
